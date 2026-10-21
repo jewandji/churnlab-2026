@@ -7,3 +7,8 @@ artifacts/
 data/raw/*.csv
 __pycache__/
 *.pyc
+
+*.pdf
+*.ipynb
+.ipynb_checkpoints/
+TP*.md
