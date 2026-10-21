@@ -1,0 +1,9 @@
+.venv/
+.venv-*/
+.venv-backup/
+.venv-backup-*/
+reports/
+artifacts/
+data/raw/*.csv
+__pycache__/
+*.pyc

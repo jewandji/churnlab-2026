@@ -1,0 +1,11 @@
+{
+  "python": "3.11.17 (main, Oct 14 2026, 01:04:22) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "uv": "uv 0.13.4 (7456b60bc 2026-10-20 x86_64-pc-windows-msvc)",
+  "packages": {
+    "churnlab": "0.1.0",
+    "pandas": "3.0.6",
+    "numpy": "2.4.6",
+    "scikit-learn": "1.9.1"
+  }
+}
