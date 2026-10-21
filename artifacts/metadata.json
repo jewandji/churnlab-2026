@@ -1,0 +1,37 @@
+{
+  "source_data": {
+    "file": "data/raw/telco.csv",
+    "sha256": "16320c9c1ec72448db59aa0a26a0b95401046bef5d02fd3aeb906448e3055e91",
+    "split_seed": 42,
+    "split_ratios": "60/20/20"
+  },
+  "features": {
+    "ordered_inputs": [
+      "tenure",
+      "MonthlyCharges",
+      "TotalCharges",
+      "Contract",
+      "InternetService",
+      "PaymentMethod"
+    ],
+    "target": "Churn (Yes=1, No=0)"
+  },
+  "selected_model": {
+    "algorithm": "RandomForestClassifier",
+    "parameters": {
+      "n_estimators": 100,
+      "max_depth": 8,
+      "random_state": 42
+    },
+    "primary_metric": "average_precision",
+    "validation_average_precision": 0.6696,
+    "validation_roc_auc": 0.8512
+  },
+  "environment": {
+    "python": "3.11.17 (main, Oct 14 2026, 01:04:22) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "scikit-learn": "1.9.1",
+    "pandas": "3.0.6",
+    "joblib": "1.6.0"
+  }
+}

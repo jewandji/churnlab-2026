@@ -3,12 +3,14 @@
 .venv-backup/
 .venv-backup-*/
 reports/
-artifacts/
 data/raw/*.csv
 __pycache__/
 *.pyc
+
+artifacts/*.joblib
 
 *.pdf
 *.ipynb
 .ipynb_checkpoints/
 TP*.md
+TP02/
