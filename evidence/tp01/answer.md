@@ -32,7 +32,6 @@ These three elements handle environment management at different abstraction laye
 
 The version constraint `numpy ~= 1.26.0` uses the compatible release operator, which is equivalent to the range `>=1.26.0, <1.27.0`. This allows bugfix and patch releases while blocking breaking minor version bumps. In contrast, an exact pin like `numpy==1.26.4` restricts the environment to a single build. Specifier ranges leave room for the resolver to pick the best match, whereas a lockfile freezes that choice permanently. Even so, adhering to semantic versioning alone does not guarantee full cross-platform compatibility across distinct hardware architectures.
 
----
 
 ### Part C - Telco dataset inspection and fingerprinting
 
@@ -55,3 +54,15 @@ The `.isna()` method in Pandas only flags recognized null sentinels, such as `np
 #### Question C3.5: Verifiable evidence of identical raw data
 
 Sharing a filename like `telco.csv` or comparing row counts is not enough to prove data integrity, as two different files can share identical names or row totals while having conflicting values. The only tamper-proof evidence is a deterministic SHA-256 cryptographic hash computed over the raw bytes of the file (`16320c9c1ec72448db59aa0a26a0b95401046bef5d02fd3aeb906448e3055e91`). Matching this exact hash guarantees bit-level parity between two machines.
+
+
+### Part D - Prove environment recreation
+
+| Item | Evidence produced in TP01 | Remaining limitation |
+|---|---|---|
+| Code | Git commit | Uncommitted edits are not identified by that commit |
+| Package selections | `pyproject.toml`, `uv.lock` | Platform/interpreter selection can affect installations |
+| Installed environment | Before/after environment records | This does not capture every OS or hardware detail |
+| Source data | Source URL and SHA-256 | This does not establish label quality or absence of leakage |
+| Trained model | Not produced in TP01 | Requires later training/configuration/artifact evidence |
+
